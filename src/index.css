@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #00AEEF; /* Bright Blue */
+  --color-secondary: #1A1A1A; /* Deep Black for text and contrast */
+  --color-accent: #E6B325; /* Golden Yellow */
+  --color-sale: #FF4D4D; /* Red for sale */
+}
+
+@layer base {
+  body {
+    @apply font-sans text-secondary bg-white antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-black uppercase tracking-widest text-xs transition-all duration-300 shadow-xl hover:shadow-primary/20;
+}
+
+.section-title {
+  @apply text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-none;
+}
+
+.product-grid-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
