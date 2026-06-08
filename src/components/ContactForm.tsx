@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,17 +26,22 @@ export const ContactForm = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // EmailJS configuration
+      const serviceId = 'service_m1vd07a';
+      const templateId = 'template_k2hmeb8';
+      const publicKey = 'DiUhF6I28G4Af6NlM';
 
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || 'Not provided',
+        subject: formData.subject,
+        message: formData.message,
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
       setStatus('success');
       setFormData({
