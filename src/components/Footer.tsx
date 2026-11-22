@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 
@@ -7,95 +7,55 @@ export const Footer = () => {
   return (
     <footer className="bg-secondary text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
-          {/* Brand */}
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <Logo className="scale-90 origin-left" />
-            </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Premium freeze-dried food products. Preserving nature's goodness, one crunch at a time.
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+          <div className="max-w-xs">
+            <Link to="/" className="flex justify-center mb-5 hover:opacity-90 transition-opacity" aria-label="Fresh N Dry Products home">
+              <Logo imgClassName="w-28 h-28 md:w-32 md:h-32 drop-shadow-lg" />
+            </Link>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Freeze-dried fruit, snacks, and hydration products from Muringoor, Chalakudy.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="https://facebook.freshndryproducts.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="https://instagram.freshndryproducts.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all"
-                aria-label="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-            </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Shop</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-primary transition-colors">All Products</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Freeze Dried Fruits</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Freeze Dried Veggies</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Healthy Snacks</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Bulk Orders</a></li>
+            <h2 className="text-sm font-bold uppercase tracking-[0.12em] mb-5">Explore</h2>
+            <ul className="space-y-3 text-slate-400 text-sm">
+              <li><Link to="/shop" className="hover:text-white transition-colors">Shop all</Link></li>
+              <li><Link to="/process" className="hover:text-white transition-colors">How it works</Link></li>
+              <li><Link to="/our-story" className="hover:text-white transition-colors">Our story</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Bulk and product enquiries</Link></li>
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Company</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-primary transition-colors">Our Story</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Sustainability</a></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link></li>
-              <li><a href="#" className="hover:text-primary transition-colors">FAQs</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
-            </ul>
+            <h2 className="text-sm font-bold uppercase tracking-[0.12em] mb-5">Product information</h2>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Ingredients, nutritional information, allergen details, and storage instructions may vary by product. Please check the product label for complete information.
+            </p>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Contact Us</h4>
+            <h2 className="text-sm font-bold uppercase tracking-[0.12em] mb-5">Contact</h2>
             <ul className="space-y-4 text-slate-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary shrink-0" />
-                <span>Fresh N Dry Products, Muringoor, Chalakudy</span>
+                <span>Fresh N Dry Products<br />Muringoor, Chalakudy</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary shrink-0" />
-                <span>+91 9037644041</span>
+                <a href="tel:+919037644041" className="hover:text-white transition-colors">+91 9037644041</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary shrink-0" />
-                <span>info@freshndryproducts.com</span>
+                <a href="mailto:info@freshndryproducts.com" className="hover:text-white transition-colors">info@freshndryproducts.com</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs">
-          <p>© 2026 Fresh N Dry Products. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Shipping Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Refund Policy</a>
-          </div>
+        <div className="pt-7 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-slate-500 text-xs">
+          <p>© {new Date().getFullYear()} Fresh N Dry Products.</p>
+          <Link to="/contact" className="hover:text-white transition-colors">Questions? Contact our team</Link>
         </div>
       </div>
     </footer>

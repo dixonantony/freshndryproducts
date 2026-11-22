@@ -4,15 +4,9 @@ export interface Product {
   tagline: string;
   description: string;
   price: number;
-  originalPrice?: number;
   weight: string;
-  rating: number;
-  reviewsCount: number;
-  category: 'energy-bars' | 'fruits' | 'vegetables' | 'snacks';
+  category: 'hydration' | 'fruits' | 'snacks';
   image: string;
-  color: string;
-  status?: 'sold-out' | 'bestseller' | 'sale';
-  discount?: string;
 }
 
 export interface ProcessStep {

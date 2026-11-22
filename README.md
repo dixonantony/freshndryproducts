@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Fresh N Dry Products
 
-# Run and deploy your AI Studio app
+Product website for Fresh N Dry Products, a freeze-dried food maker based in Muringoor, Chalakudy, Kerala.
 
-This contains everything you need to run your app locally.
+## Run locally
 
-View your app in AI Studio: https://ai.studio/apps/1b9a4219-12ac-4a08-9999-24994d6dfcf7
+Prerequisite: Node.js.
 
-## Run Locally
+```bash
+npm install
+npm run dev
+```
 
-**Prerequisites:**  Node.js
+Vite serves the app at `http://localhost:3000`.
 
+## Site pages
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- `/` Home and featured products
+- `/shop` Product catalogue and category filters
+- `/products/:productId` Product details and email enquiry
+- `/process` Freeze-drying overview and source
+- `/our-story` Company information
+- `/contact` Product, availability, and bulk enquiries
+
+## Product and contact content
+
+Product names, pack sizes, and prices are maintained in `src/constants.ts`. Confirm prices and availability before publishing changes. Use each product's current packaging as the source of truth for ingredients, allergens, nutrition claims, and storage information.
+
+The contact form uses EmailJS. See [README_CONTACT_SETUP.md](README_CONTACT_SETUP.md) for dashboard and deployment checks.

@@ -62,19 +62,18 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 pt-32 pb-20">
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-black text-secondary mb-4">
-            Get In Touch
-          </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Have questions about our products? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+        <div className="text-center mb-8">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">We’re here to help</p>
+          <h1 className="text-4xl md:text-5xl font-black text-secondary mb-3">Contact our team</h1>
+          <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
+            Have a question about our freeze-dried fruit, its crisp texture, product details, or a bulk order? Send us a message.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid min-w-0 md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -106,12 +105,12 @@ export const ContactForm = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <Mail className="text-primary" size={24} />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h3 className="font-semibold text-secondary mb-1">Email</h3>
-                    <a href="mailto:info@freshndryproducts.com" className="text-slate-600 hover:text-primary transition-colors block">
+                    <a href="mailto:info@freshndryproducts.com" className="text-slate-600 hover:text-primary transition-colors block break-all">
                       info@freshndryproducts.com
                     </a>
-                    <a href="mailto:albin.freshndry@gmail.com" className="text-slate-600 hover:text-primary transition-colors block">
+                    <a href="mailto:albin.freshndry@gmail.com" className="text-slate-600 hover:text-primary transition-colors block break-all">
                       albin.freshndry@gmail.com
                     </a>
                   </div>
@@ -119,13 +118,9 @@ export const ContactForm = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary to-secondary p-8 rounded-2xl text-white">
-              <h3 className="text-xl font-bold mb-3">Business Hours</h3>
-              <div className="space-y-2 text-white/90">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 9:00 AM - 2:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
+            <div className="border-l-4 border-primary pl-5 py-2">
+              <h3 className="text-lg font-bold text-secondary mb-2">Product questions</h3>
+              <p className="text-slate-600 leading-relaxed">For ingredients, allergens, nutrition, and storage, please refer to the product pack. If you need clarification, include the product name in your message.</p>
             </div>
           </div>
 
