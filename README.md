@@ -1,6 +1,6 @@
 # Fresh N Dry Products
 
-Product website for Fresh N Dry Products, a freeze-dried food maker based in Muringoor, Chalakudy, Kerala.
+Product website for Fresh N Dry Products, a freeze-dried food maker based in Muringoor, Chalakudy, Kerala, India.
 
 ## Run locally
 

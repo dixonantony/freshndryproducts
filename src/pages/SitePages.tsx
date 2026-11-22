@@ -61,7 +61,7 @@ export const StoryPage = () => (
             At <strong className="text-secondary">Fresh N Dry Products</strong>, we believe nature’s goodness deserves to be enjoyed in exciting new ways.
           </p>
           <p>
-            Based in <strong className="text-secondary">Muringoor, Chalakudy, Kerala</strong>, we transform fresh fruits into delicious, light, and crispy snacks using advanced freeze-drying technology.
+            Based in <strong className="text-secondary">Muringoor, Chalakudy, Kerala, India</strong>, we transform fresh fruits into delicious, light, and crispy snacks using advanced freeze-drying technology.
           </p>
           <p>
             Our process gently freezes fruits and removes moisture by turning ice directly into vapour, helping preserve their natural flavours, nutrients, and vibrant colours.

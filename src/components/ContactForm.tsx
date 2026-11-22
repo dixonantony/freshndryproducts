@@ -85,7 +85,7 @@ export const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">Address</h3>
-                    <p className="text-slate-600">Fresh N Dry Products<br />Muringoor, Chalakudy</p>
+                    <p className="text-slate-600">Fresh N Dry Products<br />Muringoor, Chalakudy, Kerala, India</p>
                   </div>
                 </div>
 

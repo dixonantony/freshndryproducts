@@ -13,7 +13,7 @@ export const Footer = () => {
               <Logo imgClassName="w-28 h-28 md:w-32 md:h-32 drop-shadow-lg" />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Freeze-dried fruit, snacks, and hydration products from Muringoor, Chalakudy.
+              Freeze-dried fruit, snacks, and hydration products from Muringoor, Chalakudy, Kerala, India.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export const Footer = () => {
             <ul className="space-y-4 text-slate-400 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary shrink-0" />
-                <span>Fresh N Dry Products<br />Muringoor, Chalakudy</span>
+                <span>Fresh N Dry Products<br />Muringoor, Chalakudy, Kerala, India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary shrink-0" />
